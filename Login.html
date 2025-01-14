@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <link rel = "icon" href="Images/Hilda's Recipes.png" type = "image/png">
+        <title> Login Page </title>
+        <link rel = "stylesheet" href = "Login.css">
+    </head>
+
+    <body>
+
+        
+        <div id="logo">
+            <a href="HomePage.php">
+            <img src="Images/Hilda's Recipes.png" alt="Logo">
+            </a>
+        </div>
+
+
+        <div class ="Form" id="Login">
+        <h1>Hilda's Recipes</h1>
+        <h2> Log In</h2>
+        <p>Log in to save and review your favorite recipes.</p>
+
+        <form action="Login_action_page.php" method="post">  
+            <div id = "formDetails">   
+
+       
+            <input type="text" id="username" name="username" required placeholder="Username">
+            <br>
+    
+            <input type="password" id="password" name="password" required placeholder="Password">
+            <br>
+
+            <button class = "button" type="submit">Log In</button>
+        </div>
+        </form>
+
+
+        <p>Don't have an account? <a href="SignUp.html">Join Now</a></p>
+        <p>Back to <a href="HomePage.php">Home</a></p>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,696 @@
+/*--------------------------------------------- General CSS----------------------------------------------------- */
+body{
+    display: flex;
+    background-color: #000000;
+}
+
+#logo{
+    background-color: #000000;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+}
+
+#logo img{
+    padding-top: 65px;
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+h1, h2{
+    text-align: center;
+    color: #CC9D45;
+}
+
+a{
+    color: #CC9D45;
+    touch-action: double-tap-zoom;
+}
+
+input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 34px;
+}
+
+
+input[type="email"]:focus, textarea:focus {
+    border-color: #CC9D45; 
+    outline: #CC9D45; 
+}  
+
+
+input[type="password"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 34px;
+}
+
+
+input[type="password"]:focus, textarea:focus {
+    border-color: #CC9D45; 
+    outline: #CC9D45; 
+}  
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 34px;
+}
+
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #CC9D45; 
+    outline: #CC9D45; 
+}  
+
+
+::placeholder {
+    color: #000000;
+    text-align: center;
+}
+
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0;
+    border: 2px solid #000000;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 34px;
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    padding-right: 40px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="black" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 30px; /* Size of the arrow */
+    background-color: #FFFFFF;
+}
+
+
+select:focus {
+    border-color: #CC9D45;
+    outline: none;
+}
+
+select option:first-child {
+    color: #000000;
+    text-align: center;
+}
+
+select option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; 
+    text-align: center;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 20px;
+    color: #CC9D45;
+    border: 2px solid #CC9D45;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 70px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: transparent;
+    border: 2px solid #CC9D45;
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #f9f6f6;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(204, 157, 69, 1);
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+
+
+/* -------------------------------------------Login & Sign Up Styling-------------------------------------------- */
+
+.Form{
+    width: 55%;
+    height: 100%;
+    background-color: #000000;
+    text-align: center;
+    padding-bottom: auto;
+    align-items: center;
+    justify-content: space-around;
+    color: #FFFFFF;
+}
+
+#Login{
+    padding-top: 100px ;
+}
+
+#SignUp{
+    padding-bottom: -2cm ;
+}
+
+.SignUp_Title{
+    font-size: larger;
+}
+
+#formDetails{
+    display: grid;;
+    grid-gap: 1px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* ----------------------------------------------Category Styling----------------------------------------------- */
+#NewCategory{
+    display: grid;
+    grid-gap: 3px;
+    margin: 20px auto 30px auto;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 90px;
+    border: #CC9D45 2px solid;
+    border-radius: 0.5cm;
+}
+
+.categoryh1{
+    margin-top: -0.5cm;
+}
+#categorySubmit{
+    margin-top: 0.5cm;
+}
+.categoryback{
+    margin-bottom: 1cm;
+}
+ 
+/*-------------------------------------------------User Profile Page-----------------------------------------------*/
+.profile{
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    width: 53%;
+    height: 500px;
+    border-radius: 1cm;
+    margin:35px 20px 0 auto;  
+    background-color: #000000;
+    padding: 20px;
+    border: solid #CC9D45 3px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .profileh2{
+    color: #CC9D45;
+    font-size: xxx-large;
+    text-align: center;
+    margin-top: 0.2cm;
+    margin-bottom: 0.2cm;
+  }
+
+.Welcome{
+    margin-bottom: -1cm;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 0.5cm;
+
+}
+
+table, th, td {
+    border: 3px dotted #CC9D45;
+}
+
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #CC9D45;
+    color: #000000;
+    border: #000000 dotted 2px;
+}
+
+  
+.button2 {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 20px;
+    color: #CC9D45;
+    border: 2px solid #CC9D45;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .button2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 70px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: transparent;
+    border: 2px solid #CC9D45;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button2:hover::before {
+    scale: 3;
+  }
+  
+  .button2:hover {
+    color: #FFFFFF;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(204, 157, 69, 1);
+  }
+  
+  .button2:active {
+    scale: 1;
+  }
+
+  .back{
+    margin-top: -1cm;
+    margin-bottom: -1cm;
+  }
+
+
+  /* ------------------------------------------- All Recipes Page-------------------------------------------------------- */
+  .AllRecipesBody{
+    display: block;
+  }
+
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #000000;
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    min-height: 100vh; 
+    box-shadow: 0 0px 20px rgba(204, 157, 69, 1);
+}
+
+.ViewRecipesTitle {
+    text-align: center;
+    color: #CC9D45;                 
+    font-size: xxx-large;
+    margin-top: 5px;
+    margin-bottom: -0.3cm;
+}
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.recipe-card {
+    background: #000000;
+    border: 2px solid #CC9D45;
+    border-radius: 10px;
+    width: 290px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px; 
+    margin-top: 0.4cm;
+}
+.recipe-card img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
+.recipe-content {
+    padding: 20px;
+}
+.recipe-title {
+    font-size: 18px;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #CC9D45;
+    color: #CC9D45;
+}
+.recipe-description {
+    color: #FFFFFF;
+}
+.view-btn {
+    display: block;
+    width: calc(100% - 40px); 
+    padding: 10px 0;
+    background: #CC9D45;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+.search-form {
+    text-align: center;
+    margin: 20px 0 ;
+}
+.search-form input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #CC9D45;
+    border-radius: 5px;
+    background: #000000;
+    color: #CC9D45;
+}
+
+.search-form ::placeholder{
+    color: #CC9D45;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #CC9D45;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+/* ----------------------------------- Individual Recipe Details Page --------------------------------------------- */
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #CC9D45;
+    font-size: xx-large;
+}
+.recipe-img {
+    text-align: center;
+}
+.recipe-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.recipe-details {
+    margin: 20px 50px 30px 50px;
+}
+.recipe-details h3 {
+    margin: 20px 0 0 0;
+    color: #CC9D45;
+    font-size: x-large;
+}
+.recipe-sub-details{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin:20px 20px;
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+.recipe-sub-details1  {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+}
+
+.recipe-sub-details1 p {
+    margin-top: 0.3cm;
+    font-size: large;
+}
+
+.recipe-sub-details1 h3 {
+    font-size: large;
+}
+
+
+
+.button-container {
+    text-align: center;
+}
+
+.back-btn {
+    padding: 10px 15px;
+    background: #000000;
+    color: #CC9D45;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block; 
+}
+
+/* ----------------------------------------------My Recipes Page----------------------------------------- */
+.container2 {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #000000;
+    color: #FFFFFF;
+    padding: 1cm;
+    border-radius: 10px;
+    position: relative;
+    min-height: max-content; 
+    box-shadow: 0 0px 20px rgba(94, 93, 93, 0.3);
+    box-shadow: 0 0px 20px rgba(204, 157, 69, 0.192);
+   
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 0.5cm;
+    margin-top: 0.2cm;
+    box-shadow: 0 0px 20px rgba(204, 157, 69, 1);
+}
+
+table, th, td {
+    border: 1px solid #CC9D45;
+}
+
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #CC9D45;
+    color: #000000;
+    border: #000000 solid 1px;
+}
+
+.MyRecipesH1{
+    color: #CC9D45;
+    font-size: xxx-large;
+    margin-top: -0.3cm;
+}
+
+.Home{
+    text-align: center;
+    margin: 1cm 0 -0.2cm 0;
+    font-size: large;
+}
+
+#Addbtn{
+    margin: 1cm 410px -10px 410px;
+
+}
+
+/* --------------------------------------------Edit Recipe Page----------------------------------------------- */    
+
+.ViewRecipesTitle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: xxx-large;
+    color: #CC9D45;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    color: #CC9D45;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: large;
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border: 1px solid #CC9D45;
+    border-radius: 5px;
+    background: #212121;
+    color: #FFFFFF;
+}
+
+.form-group input[type="number"]{
+    width: calc(100% - 40px);
+}
+
+.form-group input [type="image"]{
+    width: calc(100% - 50px);
+}
+
+.form-group textarea{
+    height: 80px;
+}
+.form-group img {
+    width: 150px;
+    margin-top: 10px;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background: #CC9D45;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ----------------------------All Categories + Cuisines LandingPage------------------------------------------- */
+
+
+.All___container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #000000;
+    color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    min-height: max-content; 
+    box-shadow: 0 0px 20px rgba(204, 157, 69, 1);
+}
+
+.All___Title {
+    text-align: center;
+    color: #CC9D45;                 
+    font-size: xxx-large;
+    margin-top: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+
+.All___card {
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    color: #CC9D45;
+    border: 2px solid #CC9D45;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    width: 250px;
+    margin-top: 0.5cm;
+    text-align: center;
+}
+
+.All___card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: transparent;
+    border: 2px solid #CC9D45;
+    transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.All___card:hover::before {
+    scale: 3;
+}
+.All___card:hover {
+    color: #FFFFFF;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(204, 157, 69, 1);
+}
+.All___card:active {
+    scale: 1;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+

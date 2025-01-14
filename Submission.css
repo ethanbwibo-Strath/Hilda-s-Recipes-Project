@@ -1,0 +1,233 @@
+html {
+    background-image: url('Images/Lokeshen2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.01cm); /* Add blur effect to background image */
+    color: #FFFFFF;
+}
+
+/* Add semi-transparent overlay */
+html:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust alpha value for opacity */
+    z-index: -1;
+}
+
+.message_success {
+    border-radius: 0.2cm;
+    width: 10cm;
+    height: 5cm;
+    margin-top: 200px;
+    margin-left: 11cm;
+    background-color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid #CC9D45 2px;
+    align-items: center;
+}
+
+.message_error {
+    border-radius: 0.2cm;
+    width: 10cm;
+    height: 6cm;
+    margin-top: 200px;
+    margin-left: 11cm;
+    background-color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid #CC9D45 2px;
+    align-items: center;
+}
+
+
+h1, h2{
+    text-align: center;
+    color: #FFFFFF;  
+}
+
+p{
+    text-align: center;}
+
+a{
+    color: #CC9D45;
+}
+
+
+/*---------------------------------------- Display User Page ---------------------------------------*/
+.display_users {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Set background image */
+/* .display_users {
+    background-image: url('Images/Lokeshen2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.01cm); Add blur effect to background image 
+}
+    */
+
+
+/* Add semi-transparent overlay */
+/* .display_users:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: -1; 
+}
+    */
+
+.display_users{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.display_usersh2{
+    color: #000000;
+    font-size: xxx-large;
+    text-align: center;
+    margin-top: 1cm;
+    margin-bottom: 0.2cm;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 0.5cm;
+    margin-top: 0.2cm;
+}
+
+table, th, td {
+    border: 1px solid #CC9D45;
+}
+
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #CC9D45;
+    color: #000000;
+    border: #000000 solid 1px;
+}
+
+.MyRecipesH1{
+    color: #000000;
+    font-size: xxx-large;
+}
+
+
+.Back{
+    background-color: #000000;
+    width: 50%;
+    margin-top: 0.5cm;
+    align-content: center;
+    border-radius: 0.5cm;
+    border: #CC9D45 solid 3px;
+    margin-left: 25%;
+}
+
+/*-------------------------------------------------Edit User Page-------------------------------------------------*/
+.edit_user {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Set background image */
+.edit_user {
+    background-image: url('Images/Lokeshen2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.01cm); /* Add blur effect to background image */
+    
+}
+
+/* Add semi-transparent overlay */
+.edit_user:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.edit_user_container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Back{
+    background-color: #000000;
+    width: 50%;
+    margin-top: 0.5cm;
+    align-content: center;
+    border-radius: 0.5cm;
+    border: #CC9D45 solid 3px;
+    margin-left: 25%;
+}
+
+.container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    color: #FFFFFF;
+}
+h2 {
+    margin-top: 0;
+    color: #CC9D45;
+    text-align: center;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+input[type="submit"] {
+    width: 97%;
+    padding: 10px;
+    background-color: #CC9D45;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #b8883b;
+}

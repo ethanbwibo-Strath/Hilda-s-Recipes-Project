@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+         
+        <meta charset = "UTF-8">
+        <link rel = "icon" href="Images/Hilda's Recipes.png" type = "image/png">
+        <title>Sign Up Page</title>  
+        <link rel="stylesheet" href="Login.css">
+    </head>
+
+    <body>
+
+        
+        <div id="logo">
+            <a href="HomePage.php">
+            <img src="Images/Hilda's Recipes.png" alt="Logo">
+            </a>
+        </div>
+    
+        
+        <div class ="Form" id = SignUp>
+            <h1>Hilda's Recipes</h1>
+            <h2 class="SignUp_Title">Sign Up</h2>
+            <p>Sign up to save and review your favorite recipes.</p>
+
+            <form action="SignUp_action_page.php" method="post">
+                <div id = "formDetails">
+                
+                <input type="text" id="username" name="username" required placeholder="Username">
+                <br>
+
+                <input type="email" id="email" name="email" required placeholder="Email">
+                <br>
+                
+                <input type="password" id="password" name="password" required placeholder="Password">
+                <br>  
+                
+                <select name="role" required>
+                <option value="">User Role</option>
+                <option value="Recipe Owner">Recipe Owner</option>
+                <option value="Admin">Admin</option>
+                </select>
+
+                <button class = "button" type="submit">Sign Up</button>
+                <p>Already have an account? <a href="Login.html">Log in</a></p>
+                <p class="SignUp_Home">Back to <a href="HomePage.php">Home</a></p>
+                </div>
+
+                <p>By signing up, you agree to our <a href="#Terms of Service">Terms of Service</a> and <a href="#Privacy Policy">Privacy Policy</a>.</p>
+
+            </form>
+        </div>
+        
+    </body>
+</html>

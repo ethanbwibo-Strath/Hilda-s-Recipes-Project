@@ -1,0 +1,485 @@
+/* ------------------------------------------ HpmePage Styling--------------------------------------------- */
+*{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;    
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    background-color: #000000;
+    background-attachment: fixed;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none; /* Remove the default list bullet points */
+    display: flex; /* Use flexbox */
+}
+
+nav ul li {
+    margin-right: 25px; /* Add spacing between the list items */
+}
+
+
+#Nav_Bar{
+    width: 100%;
+    height: 2.2cm;
+    margin: auto, 1cm,auto,1cm ;
+    padding: 0.01cm;
+    text-overflow: clip;
+}
+
+
+nav img {
+    
+    height: 2cm;
+    width: 2cm;
+}
+
+nav ul li a {
+    font-size: x-large;
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Add padding to create space around the links */
+    border: 2px solid transparent; /* Add transparent border */
+    transition: color 0.3s, border-color 0.3s; /* Add transition effect */
+    border-radius: 25px;
+    color: #f9f6f6;
+}
+
+nav ul li a:hover {
+    color: #846434; /* Change text color on hover */
+    border-color: #846434; /* Change border color on hover */
+    box-shadow: 0px, 0px, 20px, 0px rgba(255,255,255,0.7);
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+#dropdown2{
+  margin-left: 15px;
+}
+.dropbtn{
+  font-size: x-large;
+  text-decoration: none; /* Remove underline from links */
+  padding: 5px 10px; /* Add padding to create space around the links */
+  border: 2px solid transparent; /* Add transparent border */
+  transition: color 0.3s, border-color 0.3s; /* Add transition effect */
+  border-radius: 25px;
+  color: #f9f6f6;
+  margin-right: 10px;
+  margin-top: 5px;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0.001cm;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 25px;
+  margin-top: 0.3cm;
+  align-items: center;
+}
+
+.dropdown-content a {
+    display: block;
+    font-size: x-large;
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Add padding to create space around the links */
+    border: 2px solid transparent; /* Add transparent border */
+    transition: color 0.5s, border-color 0.5s; /* Add transition effect */
+    border-radius: 25px;
+    color: #f9f6f6;
+    margin: auto;
+}
+
+.dropdown-content a:hover {
+    color: #846434; /* Change text color on hover */
+    border-color: #846434; /* Change border color on hover */
+    box-shadow: 0px, 0px, 20px, 0px rgba(255,255,255,0.7);
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display:contents;
+}
+
+li + .button{
+  padding: 5px, 10px;
+  margin: auto;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 20px;
+    color: #846434;
+    border: 2px solid #846434;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  
+
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #212121;
+    border: 2px solid #846434;
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #f9f6f6;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+
+  .button, #Login{
+    margin-right: 10px;
+  }
+
+  /* Body part  */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Set background image */
+body {
+    background-image: url('Images/Lokeshen2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.01cm); /* Add blur effect to background image */
+}
+
+/* Add semi-transparent overlay */
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust alpha value for opacity */
+    z-index: -1;
+}
+
+/* --------------------------------------------Content Styling-------------------------------------------- */
+
+#Headline{
+    font-size: x-large;
+}
+
+
+/* Define section styles */
+section {
+    padding: 15px 0; /* Add padding top and bottom */
+    color: #333;
+}
+
+.content{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    border-radius: 1cm;
+    margin: 1cm auto 1cm auto;
+    background-color: #000000;
+    padding: 20px;
+    border: solid #846434 3px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.intro-text{
+    width: 500px;
+    color: #FFFFFF;
+}
+
+
+/* Define intro section layout */
+.content #image img{
+    height: 350px;
+    border-radius: 0.2cm;
+    margin: none;
+}
+
+/* Define menu section layout */
+#Mealsh2{
+  color: #000000;
+  font-size: x-large;
+  text-align: center;
+}
+
+#MealsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    
+}   
+
+.meals a {
+    text-decoration: none;
+    color: inherit; /* Ensure links inherit text color */
+}
+
+#Meals{
+    width: 9cm ;
+    height: 510px;
+    border: #846434 3px solid;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 20px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+#Meals:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}
+
+.meals img {
+    width: 100%; /* Set maximum width to 100% of container */
+    height: 310px; /* Set maximum height to 100% of container */
+    border-radius: 20px;
+}
+
+#Meals p{
+    text-align: center;
+    margin-top: -0.4cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+}
+#Mealslink{
+    text-decoration: none;
+}
+
+
+/* New Recipe button */
+#newcontainer{
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  border-radius: 1cm;
+  margin: 0.25cm auto 0 auto;  
+  background-color: #000000;
+  padding: 20px;
+  border: solid #846434 3px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.NewRecipebtn{
+  gap: 10px;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+.button2 {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 20px;
+  color: #846434;
+  border: 2px solid #846434;
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.button2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 70px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #212121;
+  border: 2px solid #846434;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button2:hover::before {
+  scale: 3;
+}
+
+.button2:hover {
+  color: #FFFFFF;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.button2:active {
+  scale: 1;
+}
+
+/*-----------------------------------------------Contact Us Styling--------------------------------------------- */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: x-large;
+    margin-bottom: -1cm;
+    
+}
+.socials-container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 40px;
+    background-color: #000000;
+    border: #846434 3px solid;
+    border-radius: 20px;
+  }
+  .social {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #846434;
+  }
+  .twitter:hover {
+    background: linear-gradient(45deg, #66757f, #00acee, #36daff, #dbedff);
+    transform: scale(1.2);
+  }
+  .facebook:hover {
+    background: linear-gradient(45deg, #134ac0, #316ff6, #78a3ff);
+    transform: scale(1.2);
+  }
+  .instagram:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    transform: scale(1.2);
+  }
+  .social svg {
+    fill: #846434;
+    width: 20px;
+    height: 20px;
+  }
+
+  .social svg:hover {
+    fill: #FFFFFF;
+  }
+
+  .NewRecipebtn{
+    gap: 10px;
+    margin-right: 1cm ;
+    justify-content: space-between;
+    
+  }
+
+  #Loginbtn{
+    margin-left: 1cm;
+  }
+
+
+/*-------------------------------------------------Admin Dashboard Styling-----------------------------------------------*/
+
+#newcontainer2{
+  display: flex;
+  justify-content: center;
+  margin: 0.5cm 0 1cm 0;
+}
+
+#newcontainer2pt1{
+  justify-content: space-around;
+}
+
+#newcontainer2pt2{
+  margin: 0 2.5cm 0 2.5cm; 
+  justify-content: space-around;
+}
+
+.Welcome{
+  font-size: xx-large;
+}
+
+.Logout{
+  margin: 0.5cm 0 1cm 0;
+  
+}
+.Home{
+  color: #CC9D45;}
+
+#Adminsh2{
+  color: #000000;
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 1cm;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "icon" href="Images/Hilda's Recipes.png" type = "image/png">
+    <link rel = "stylesheet" href = "Login.css">
+    <title>New Cuisine ~ Hilda's Recipes</title>
+</head>
+
+<body>
+
+    <div class ="Form" id="NewCategory">
+    <h1 class="categoryh1">Hilda's Recipes</h1>
+    <h2>Add New Cuisine</h2>
+    <p>Add a new cuisine for your favorite recipes.</p>
+
+        <form action="cuisineForm_action.php" method="post"> 
+            <div id = "CategoryForm">
+            
+                        <label for = "cuisine"><b>Cuisine</b></label>
+                        <input type="text" id = "cuisine" name="Cuisine" placeholder="e.g. Chinese">
+                        <br>
+
+                        <label for = "description"><b>Description</b></label>
+                        <input type="text" id = "description" name="Description" placeholder="Describe the cuisine.">
+                        <br>
+
+                        <button class = "button" id="categorySubmit" type="submit">Submit</button>
+                        <p>Back to <a href="admin_dashboard.php">Dashboard</a></p>
+                        <p class="categoryback">Back to <a href="HomePage.php">Home</a></p>
+                
+        </div>
+        </form>
+
+    </div>
+</body>
+</html>
