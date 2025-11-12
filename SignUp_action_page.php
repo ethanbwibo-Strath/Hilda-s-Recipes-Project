@@ -1,4 +1,4 @@
-<?php
+<!-- <php
 
 require("connect.php");
 
@@ -9,7 +9,65 @@ if (!isset($_POST["username"], $_POST["email"], $_POST["password"], $_POST["role
 $username = $_POST["username"];
 $email = $_POST["email"];
 $password = $_POST["password"];
-$role = $_POST["role"];
+$role = $_POST["role"]; -->
+
+<?php
+
+require("connect.php");
+
+if(!isset($_POST["username"], $_POST["email"], $_POST["password"])) {
+    die("Please fill out all fields.");
+}
+
+$username = $_POST["username"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+$role = "Recipe Owner";
+
+// --- START PASSWORD STRENGTH CHECK ---
+$errors = [];
+if (strlen($password) < 8) {
+    $errors[] = "Password must be at least 8 characters long.";
+}
+if (!preg_match('/[A-Z]/', $password)) {
+    $errors[] = "Password must contain at least one uppercase letter.";
+}
+if (!preg_match('/[a-z]/', $password)) {
+    $errors[] = "Password must contain at least one lowercase letter.";
+}
+if (!preg_match('/[0-9]/', $password)) {
+    $errors[] = "Password must contain at least one number.";
+}
+
+// If there are any errors, stop the script and show them.
+if (!empty($errors)) {
+    echo '
+<!DOCTYPE html>
+<html>
+<head>
+<title>Record Creation</title>
+<meta charset="UTF-8">
+<link rel="icon" href="Images/Hilda\'s Recipes.png" type="image/png">
+<link rel="stylesheet" href="Submission.css">
+</head>
+
+<body>
+<div class="message_error">
+    <h1>Password is not strong enough.</h1>';
+
+    foreach ($errors as $error) {
+        echo "<p>" . htmlspecialchars($error) . "</p>";
+    }
+
+    echo '<a href="SignUp.html"><p><b>Go back</b></p></a>
+</div>
+</body>
+</html>';
+
+    $conn->close(); // Close the connection
+    exit(); // Stop the script from running further
+}
+// --- END PASSWORD STRENGTH CHECK ---
 
 // --- 1. HASH THE PASSWORD ---
 // This creates a secure, salted hash using the default (bcrypt) algorithm.
@@ -66,7 +124,7 @@ if ($result->num_rows > 0) {
   <body>
     <div class="message_success">
         <h1>Account Created Successfully</h1>
-        <a href="Homepage.php"><p><b>Go back to Home</b></p></a>
+        <a href="HomePage.php"><p><b>Go back to Home</b></p></a>
     </div>
   </body>
   </html>';
