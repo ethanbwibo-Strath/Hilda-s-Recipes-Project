@@ -32,7 +32,7 @@ $result = $conn->query($sql);
                 echo "<td>" . htmlspecialchars($row["ID"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["Username"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["Email"]) . "</td>";
-                echo "<td>" . htmlspecialchars($row["Password"]) . "</td>";
+                echo "<td>" . "********" . "</td>";
                 echo "<td>" . htmlspecialchars($row["Role"]) . "</td>";
                 echo '<td><a href="edit_user.php?ID=' . urlencode($row["ID"]) . '">Edit</a></td>';
                 echo "</tr>";

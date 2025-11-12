@@ -2,16 +2,27 @@
 
 require("connect.php");
 
-if(isset($_POST["username"], $_POST["email"], $_POST["password"], $_POST["role"]))
+if (!isset($_POST["username"], $_POST["email"], $_POST["password"], $_POST["role"])) {
+    die("Please fill out all fields.");
+}
 
 $username = $_POST["username"];
 $email = $_POST["email"];
 $password = $_POST["password"];
 $role = $_POST["role"];
 
-// Check if the username already exists
-$checkUsernameQuery = "SELECT * FROM tblusers WHERE Username = '$username'";
-$result = $conn->query($checkUsernameQuery);
+// --- 1. HASH THE PASSWORD ---
+// This creates a secure, salted hash using the default (bcrypt) algorithm.
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+
+// --- 2. USE A PREPARED STATEMENT (to prevent SQL Injection) ---
+
+// First, check if the username already exists
+$stmt = $conn->prepare("SELECT * FROM tblusers WHERE Username = ?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     // Username already exists
@@ -34,15 +45,14 @@ if ($result->num_rows > 0) {
 </body>
 </html>';
 } else {
-// Username is available, insert the new record
-$sql = "INSERT INTO tblusers (Username, Email, Password, Role)
-    VALUES ('$username', '$email', '$password', '$role')";
-
-
-
+    // Username is available, insert the new record with the HASHED password
+    $stmt = $conn->prepare("INSERT INTO tblusers (Username, Email, Password, Role) VALUES (?, ?, ?, ?)");
     
-if ($conn->query($sql) === TRUE) {
-  echo 
+    // Bind the HASHED password, not the original $password
+    $stmt->bind_param("ssss", $username, $email, $hashed_password, $role);
+    
+    if ($stmt->execute()) {
+        echo 
 '
   <!DOCTYPE html>
   <html>
@@ -61,10 +71,8 @@ if ($conn->query($sql) === TRUE) {
   </body>
   </html>';
 
-  } 
-else {
+  } else {
   echo 
-
   '
     <!DOCTYPE html>
     <html>
@@ -84,7 +92,7 @@ else {
   }
 }
 
+$stmt->close();
 $conn->close();
-
 
 ?>

@@ -1,4 +1,4 @@
-CREATE TABLE `hilda's_recipes`.`tblusers` (
+CREATE TABLE `hildas_recipes`.`tblusers` (
     `ID` INT(11) NOT NULL AUTO_INCREMENT , 
     `Username` VARCHAR(255) NOT NULL , 
     `Email` VARCHAR(255) NOT NULL , 
@@ -7,7 +7,7 @@ CREATE TABLE `hilda's_recipes`.`tblusers` (
     PRIMARY KEY (`ID`)) ENGINE = InnoDB;
 
 
-CREATE TABLE `hilda's_recipes`.`tblrecipes` (
+CREATE TABLE `hildas_recipes`.`tblrecipes` (
     `RecipeID` INT(11) NOT NULL AUTO_INCREMENT , 
     `Title` VARCHAR(255) NOT NULL , 
     `Description` VARCHAR(1000) NOT NULL , 
@@ -22,7 +22,7 @@ CREATE TABLE `hilda's_recipes`.`tblrecipes` (
     PRIMARY KEY (`RecipeID`)) ENGINE = InnoDB;
 
 
-CREATE TABLE `hilda's_recipes`.`categories` (
+CREATE TABLE `hildas_recipes`.`categories` (
     `CategoryID` INT(11) NOT NULL AUTO_INCREMENT , 
     `CategoryName` VARCHAR(50) NOT NULL , 
     `Description` VARCHAR(50) NOT NULL , 
@@ -32,7 +32,7 @@ CREATE TABLE `hilda's_recipes`.`categories` (
 
 
 
-CREATE TABLE `hilda's_recipes`.`cuisines` (
+CREATE TABLE `hildas_recipes`.`cuisines` (
     `CuisineID` INT(11) NOT NULL AUTO_INCREMENT , 
     `CuisineName` VARCHAR(50) NOT NULL , 
     `Description` VARCHAR(50) NOT NULL , 

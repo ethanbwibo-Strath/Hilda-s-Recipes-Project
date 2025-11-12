@@ -28,11 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['ID'];
     $new_username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['password']; // The new plain-text password
 
+    // Hash the new password before saving
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     // Prepare the SQL statement to prevent SQL injection
     $stmt = $conn->prepare("UPDATE tblusers SET Username=?, email=?, Password=? WHERE ID=?");
-    $stmt->bind_param("sssi", $new_username, $email, $password, $id);
+    // Bind the HASHED password, not the original $password
+    $stmt->bind_param("sssi", $new_username, $email, $hashed_password, $id);
 
     if ($stmt->execute()) {
         // Redirect to display_users.php after successful update for admin, or to the home page for regular users

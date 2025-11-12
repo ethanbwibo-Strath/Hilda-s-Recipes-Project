@@ -25,7 +25,9 @@ if ($result === false) {
 if ($result->num_rows > 0) {
     // User found, verify the password
     $row = $result->fetch_assoc();
-    if ($pass == $row['Password']) { // Simple password match, no hashing
+
+    // Use password_verify() to check the hash
+    if (password_verify($pass, $row['Password'])) { 
         // Password is correct, start a session
         $_SESSION['username'] = $user;
         $_SESSION['user_id'] = $row['ID']; // Store user ID in session
